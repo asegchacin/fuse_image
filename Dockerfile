@@ -1,5 +1,6 @@
 FROM registry.redhat.io/ubi8/openjdk-8 
 ENV JBOSS_HOME /home/jboss/
+EXPOSE 8181
 USER root
 RUN microdnf update java-1.8.0-devel \
  && microdnf install curl gzip -y \
