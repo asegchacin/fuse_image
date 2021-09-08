@@ -7,7 +7,7 @@ RUN curl http://nexus3-nexus3.cloudappsdesa.fiduprevisora.com.co/repository/mave
 RUN mkdir -p /home/jboss/.m2 \ 
  && tar -xzvf /tmp/fuse.tar.gz -C /opt/ \  
  && rm -rf /tmp/fuse.tar.gz
-COPY .m2 /home/jboss/.m2
+COPY m2 /home/jboss/.m2
 COPY docker-entrypoint.sh /home/jboss/docker-entrypoint.sh
 COPY exposition-fiduprevisora-peoplesoft-1.0.jar /opt/fuse78/deploy/
 RUN chmod -R a+x /opt/fuse78/deploy \
