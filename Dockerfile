@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/openjdk-8:1.10-1 
+FROM registry.redhat.io/ubi8/openjdk-8 
 USER root
 RUN microdnf update java-1.8.0-devel \
  && microdnf install curl gzip -y \
