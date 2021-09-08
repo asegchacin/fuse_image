@@ -1,4 +1,5 @@
 FROM registry.redhat.io/ubi8/openjdk-8 
+ENV JBOSS_HOME /home/jboss/
 USER root
 RUN microdnf update java-1.8.0-devel \
  && microdnf install curl gzip -y \
@@ -16,6 +17,8 @@ RUN chmod -R a+x /opt/fuse78/deploy \
  && chown -R jboss:root /home/jboss \
  && chmod 664 /etc/passwd 
 USER 185
+WORKDIR ${JBOSS_HOME}
+RUN chmod +x docker-entrypoint.sh
 ENTRYPOINT ["/home/jboss/docker-entrypoint.sh"]
 
 
