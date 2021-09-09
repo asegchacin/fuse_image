@@ -12,7 +12,8 @@ RUN mkdir -p /home/jboss/.m2 \
 COPY m2 /home/jboss/m2
 COPY docker-entrypoint.sh /home/jboss/docker-entrypoint.sh
 COPY exposition-fiduprevisora-peoplesoft-1.0.jar /opt/fuse78/deploy/
-RUN mv /home/jboss/m2 /home/jboss/.m2 \
+RUN chmod a+x /home/jboss/docker-entrypoint.sh \
+ && mv /home/jboss/m2 /home/jboss/.m2 \
  && chmod -R a+x /opt/fuse78/deploy \
  && chown -R jboss:root /opt/fuse78 \
  && chmod -R "g+rwX" /home/jboss \
