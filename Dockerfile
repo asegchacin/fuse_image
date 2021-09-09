@@ -19,7 +19,6 @@ RUN chmod a+x /home/jboss/docker-entrypoint.sh \
  && chmod -R "g+rwX" /home/jboss \
  && chown -R jboss:root /home/jboss \
  && chmod 664 /etc/passwd
-USER jboss
 ENTRYPOINT ["/home/jboss/docker-entrypoint.sh"]
 
 
