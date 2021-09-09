@@ -1,5 +1,5 @@
 FROM registry.access.redhat.com/ubi8/openjdk-8:1.10-1 
-ENV JBOSS_HOME /home/jboss/
+ENV JBOSS_HOME=/home/jboss/
 EXPOSE 8181
 USER root
 RUN microdnf update java-1.8.0-devel \
