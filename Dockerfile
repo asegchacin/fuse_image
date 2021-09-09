@@ -16,7 +16,6 @@ RUN chmod a+x /home/jboss/docker-entrypoint.sh \
  && mv /home/jboss/m2 /home/jboss/.m2 \
  && chmod -R a+x /opt/fuse78/deploy \
  && chmod -R a+w /opt/fuse78/data/log \
- && chmod -R ug+w /opt/fuse78/data/ \
  && chown -R jboss:root /opt/fuse78 \
  && chmod -R "g+rwX" /home/jboss \
  && chown -R jboss:root /home/jboss \
