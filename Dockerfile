@@ -17,7 +17,6 @@ RUN chmod -R a+x /opt/fuse78/deploy \
  && chmod -R "g+rwX" /home/jboss \
  && chown -R jboss:root /home/jboss \
  && chmod 664 /etc/passwd 
-USER 185
 WORKDIR ${JBOSS_HOME}
 RUN chmod +x docker-entrypoint.sh
 ENTRYPOINT ["/home/jboss/docker-entrypoint.sh"]
